@@ -3,17 +3,6 @@ const app = express();
 const emailCheck = require('node-email-check');
 const mongoose = require('mongoose');
 
-//AsyncFunction vlidate Email
-async function validateEmail(email) {
-    try {
-      const isValid = await emailValidator(email);
-      console.log(`Is "${email}" a valid email address?`, isValid);
-    } catch (error) {
-      console.error('Error validating email:', error);
-    }
-  }
-  
-
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://ExpressUser:20101234014@doriansproyect.2zla2.mongodb.net/Concurrent?retryWrites=true&w=majority', {
   useNewUrlParser: true,
